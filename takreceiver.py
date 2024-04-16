@@ -6,6 +6,8 @@ import takproto
 
 MCAST_GRP = '239.2.3.1'
 MCAST_PORT = 6969
+# MCAST_PORT = 4242
+
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -19,6 +21,8 @@ while True:
     buf = sock.recv(10240)
     result = takproto.parse_proto(buf)
     if result:
+        print("Takproto:")
         print(result)
     else:
+        print("COT:")
         print(buf)

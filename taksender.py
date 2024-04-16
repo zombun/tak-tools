@@ -33,7 +33,7 @@ def gen_cot():
     """Generate CoT Event."""
     root = ET.Element("event")
     root.set("version", "2.0")
-    root.set("type", "a-h-A-M-A")  # insert your type of marker
+    root.set("type", "a-n-A-M-A")  # insert your type of marker
     root.set("uid", "Tetris")
     root.set("how", "m-g") 
     root.set("time", pytak.cot_time())
